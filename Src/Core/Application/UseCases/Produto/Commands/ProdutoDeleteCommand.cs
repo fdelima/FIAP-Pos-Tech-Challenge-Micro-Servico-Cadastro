@@ -1,9 +1,9 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Commands
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Commands
 {
-    internal class ProdutoDeleteCommand : IRequest<ModelResult>
+    public class ProdutoDeleteCommand : IRequest<ModelResult>
     {
         public ProdutoDeleteCommand(Guid id, string[]? businessRules = null)
         {

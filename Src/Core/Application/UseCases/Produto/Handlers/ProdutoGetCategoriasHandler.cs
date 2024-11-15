@@ -1,11 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Commands;
-using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Handlers
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Handlers
 {
-    internal class ProdutoGetCategoriasHandler : IRequestHandler<ProdutoGetCategoriasCommand, PagingQueryResult<KeyValuePair<short, string>>>
+    public class ProdutoGetCategoriasHandler : IRequestHandler<ProdutoGetCategoriasCommand, PagingQueryResult<KeyValuePair<short, string>>>
     {
         private readonly IProdutoService _service;
 

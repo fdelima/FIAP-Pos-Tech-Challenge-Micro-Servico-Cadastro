@@ -12,8 +12,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Application\FIAP.Pos.Tech.Challenge.Application.csproj" />
-		<ProjectReference Include="..\..\External\Infra\FIAP.Pos.Tech.Challenge.Infra.csproj" />
+		<ProjectReference Include="..\Application\FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.csproj" />
+		<ProjectReference Include="..\..\External\Infra\FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.csproj" />
 	</ItemGroup>
 
 </Project>

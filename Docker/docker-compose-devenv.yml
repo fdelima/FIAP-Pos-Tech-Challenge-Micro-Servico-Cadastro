@@ -3,8 +3,8 @@ volumes:
   sql_data: {}
 
 services:
-  fiap.pos.tech.challenge.api:
-    image: ${DOCKER_REGISTRY-}fiappostechchallengeapi
+  fiap.pos.tech.challenge.micro.servico.cadastro.api:
+    image: ${DOCKER_REGISTRY-}fiappostechchallengemicroservicocadastroapi
     depends_on:
       - mssqltools
     build:
@@ -29,7 +29,7 @@ services:
     depends_on:
       - sqlserver
     volumes:
-      - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/database.sh:/tmp/init-database.sh
-      - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/tech-challenge-mer-1.sql:/tmp/tech-challenge-mer-1.sql
-      - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/tech-challenge-mer-2.sql:/tmp/tech-challenge-mer-2.sql
+      - ./DataBase/init-database.sh:/tmp/init-database.sh
+      - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/Modelagem-banco-de-dados/micro-servico-cadastro/tech-challenge-mer-1.sql:/tmp/tech-challenge-mer-1.sql
+      - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/Modelagem-banco-de-dados/micro-servico-cadastro/tech-challenge-mer-2.sql:/tmp/tech-challenge-mer-2.sql
     command: /bin/bash ./tmp/init-database.sh  

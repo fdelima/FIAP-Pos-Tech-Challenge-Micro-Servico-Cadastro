@@ -1,12 +1,12 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Extensions;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Infra.Gateways
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways
 {
     /// <summary>
     /// Implementação dos Gateways, classe reponsavel efetivamente pela realização da ação no banco de dados.
@@ -185,7 +185,7 @@ namespace FIAP.Pos.Tech.Challenge.Infra.Gateways
             if (ex.Message.StartsWith("The DELETE statement conflicted"))
             {
 
-                Type[] types = Util.GetTypesInNamespace("FIAP.Pos.Tech.Challenge.Domain.Entities");
+                Type[] types = Util.GetTypesInNamespace("FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities");
 
                 foreach (Type type in types)
                 {

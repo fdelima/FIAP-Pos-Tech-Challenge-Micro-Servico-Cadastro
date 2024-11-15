@@ -1,9 +1,9 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Entities;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using FluentValidation;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Services
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Services
 {
     public class DispositivoService : BaseService<Dispositivo>
     {

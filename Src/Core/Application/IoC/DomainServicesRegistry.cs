@@ -1,10 +1,10 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Domain.Services;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FIAP.Pos.Tech.Challenge.Application.IoC
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC
 {
-    internal static class DomainServicesRegistry
+    public static class DomainServicesRegistry
     {
         public static void RegisterDomainServices(this IServiceCollection services)
         {

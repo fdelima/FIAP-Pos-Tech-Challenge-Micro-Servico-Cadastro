@@ -1,10 +1,10 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Services
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Services
 {
     /// <summary>
     /// Base da Lógica de negócio e regras da aplicação.

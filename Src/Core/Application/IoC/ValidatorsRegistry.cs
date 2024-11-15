@@ -1,11 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Entities;
-using FIAP.Pos.Tech.Challenge.Domain.Validator;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Validator;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FIAP.Pos.Tech.Challenge.Application.IoC
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC
 {
-    internal static class ValidatorsRegistry
+    public static class ValidatorsRegistry
     {
         public static void RegisterValidators(this IServiceCollection services)
         {

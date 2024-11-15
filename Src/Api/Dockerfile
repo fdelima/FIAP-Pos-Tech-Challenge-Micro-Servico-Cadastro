@@ -11,9 +11,9 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Src/Api/FIAP.Pos.Tech.Challenge.Api.csproj", "Src/Api/"]
 COPY ["Src/Core/Ioc/FIAP.Pos.Tech.Challenge.Ioc.csproj", "Src/Core/Ioc/"]
-COPY ["Src/Core/Application/FIAP.Pos.Tech.Challenge.Application.csproj", "Src/Core/Application/"]
-COPY ["Src/Core/Domain/FIAP.Pos.Tech.Challenge.Domain.csproj", "Src/Core/Domain/"]
-COPY ["Src/External/Infra/FIAP.Pos.Tech.Challenge.Infra.csproj", "Src/Adapter/Driven/Infra/"]
+COPY ["Src/Core/Application/FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.csproj", "Src/Core/Application/"]
+COPY ["Src/Core/Domain/FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.csproj", "Src/Core/Domain/"]
+COPY ["Src/External/Infra/FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.csproj", "Src/Adapter/Driven/Infra/"]
 RUN dotnet restore "./Src/Api/FIAP.Pos.Tech.Challenge.Api.csproj"
 COPY . .
 WORKDIR "/src/Src/Api"

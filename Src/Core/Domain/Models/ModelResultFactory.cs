@@ -1,6 +1,6 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Messages;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Models
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models
 {
     /// <summary>
     /// Fábrica de commads result

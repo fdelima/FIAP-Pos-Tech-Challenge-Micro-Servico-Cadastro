@@ -1,7 +1,7 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Entities;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Extensions
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions
 {
     /// <summary>
     /// Extensão da model para informar os campos de validação.

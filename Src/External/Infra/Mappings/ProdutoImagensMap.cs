@@ -1,8 +1,8 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Entities;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FIAP.Pos.Tech.Challenge.Infra.Mappings;
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Mappings;
 
 internal class ProdutoImagensMap : IEntityTypeConfiguration<ProdutoImagens>
 {

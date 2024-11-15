@@ -1,4 +1,4 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FIAP.Pos.Tech.Challenge.Api.Controllers

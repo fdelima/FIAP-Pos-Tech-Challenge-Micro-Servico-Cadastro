@@ -1,9 +1,9 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Commands
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands
 {
-    internal class ClientePostCommand : IRequest<ModelResult>
+    public class ClientePostCommand : IRequest<ModelResult>
     {
         public ClientePostCommand(Domain.Entities.Cliente entity,
             string[]? businessRules = null)

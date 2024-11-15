@@ -1,11 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Commands;
-using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Handlers
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers
 {
-    internal class ClienteGetItemsHandler : IRequestHandler<ClienteGetItemsCommand, PagingQueryResult<Domain.Entities.Cliente>>
+    public class ClienteGetItemsHandler : IRequestHandler<ClienteGetItemsCommand, PagingQueryResult<Domain.Entities.Cliente>>
     {
         private readonly IService<Domain.Entities.Cliente> _service;
 

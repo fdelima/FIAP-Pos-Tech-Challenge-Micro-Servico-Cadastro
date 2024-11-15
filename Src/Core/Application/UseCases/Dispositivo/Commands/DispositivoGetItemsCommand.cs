@@ -1,11 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using MediatR;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Dispositivo.Commands
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Commands
 {
-    internal class DispositivoGetItemsCommand : IRequest<PagingQueryResult<Domain.Entities.Dispositivo>>
+    public class DispositivoGetItemsCommand : IRequest<PagingQueryResult<Domain.Entities.Dispositivo>>
     {
         public DispositivoGetItemsCommand(IPagingQueryParam filter, Expression<Func<Domain.Entities.Dispositivo, object>> sortProp)
         {

@@ -1,6 +1,6 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Entities;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Interfaces
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces
 {
     public interface IProdutoService : IService<Produto>
     {

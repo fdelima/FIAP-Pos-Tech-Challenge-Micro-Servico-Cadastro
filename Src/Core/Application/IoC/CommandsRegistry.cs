@@ -1,19 +1,19 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Commands;
-using FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Handlers;
-using FIAP.Pos.Tech.Challenge.Application.UseCases.Dispositivo.Commands;
-using FIAP.Pos.Tech.Challenge.Application.UseCases.Dispositivo.Handlers;
-using FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Commands;
-using FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Handlers;
-using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Entities;
-using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Handlers;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Handlers;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace FIAP.Pos.Tech.Challenge.Application.IoC
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC
 {
-    internal static class CommandsRegistry
+    public static class CommandsRegistry
     {
         public static void RegisterCommands(this IServiceCollection services)
         {

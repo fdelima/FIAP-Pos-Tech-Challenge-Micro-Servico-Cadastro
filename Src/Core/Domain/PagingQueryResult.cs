@@ -1,4 +1,4 @@
-﻿namespace FIAP.Pos.Tech.Challenge.Domain
+﻿namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain
 {
     /// <summary>
     /// Paginação do resultado da query

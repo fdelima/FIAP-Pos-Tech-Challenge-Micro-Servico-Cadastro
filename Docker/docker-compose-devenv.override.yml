@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  fiap.pos.tech.challenge.api:
+  fiap.pos.tech.challenge.micro.servico.cadastro.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080

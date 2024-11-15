@@ -1,7 +1,7 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Domain.Entities;
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 
 public partial class Produto : IDomainEntity
 {

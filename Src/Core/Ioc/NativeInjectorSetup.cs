@@ -1,5 +1,5 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.IoC;
-using FIAP.Pos.Tech.Challenge.Infra.IoC;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.IoC;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

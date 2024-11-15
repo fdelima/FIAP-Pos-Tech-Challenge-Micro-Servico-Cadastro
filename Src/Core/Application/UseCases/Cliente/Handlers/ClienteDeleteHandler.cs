@@ -1,11 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Commands;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Cliente.Handlers
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers
 {
-    internal class ClienteDeleteHandler : IRequestHandler<ClienteDeleteCommand, ModelResult>
+    public class ClienteDeleteHandler : IRequestHandler<ClienteDeleteCommand, ModelResult>
     {
         private readonly IService<Domain.Entities.Cliente> _service;
 

@@ -1,9 +1,9 @@
-﻿using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using MediatR;
 
-namespace FIAP.Pos.Tech.Challenge.Application.UseCases.Dispositivo.Commands
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Commands
 {
-    internal class DispositivoFindByIdCommand : IRequest<ModelResult>
+    public class DispositivoFindByIdCommand : IRequest<ModelResult>
     {
         public DispositivoFindByIdCommand(Guid id)
         {

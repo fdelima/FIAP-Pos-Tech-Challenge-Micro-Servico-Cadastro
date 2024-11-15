@@ -1,12 +1,12 @@
-﻿using FIAP.Pos.Tech.Challenge.Application.UseCases.Produto.Commands;
-using FIAP.Pos.Tech.Challenge.Domain;
-using FIAP.Pos.Tech.Challenge.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Domain.Models;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Produto.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using FluentValidation;
 using MediatR;
 using System.Linq.Expressions;
 
-namespace FIAP.Pos.Tech.Challenge.Application.Controllers
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers
 {
     /// <summary>
     /// Regras da aplicação referente ao produto
