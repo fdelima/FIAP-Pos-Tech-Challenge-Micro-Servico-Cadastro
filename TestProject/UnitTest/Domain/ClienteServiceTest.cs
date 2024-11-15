@@ -1,7 +1,10 @@
-﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Services;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Validator;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.ValuesObject;
@@ -138,6 +141,38 @@ namespace TestProject.UnitTest.Domain
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
+        public async Task DeletarCliente(Guid idCliente, string nome, string email, long cpf)
+        {
+            ///Arrange
+            var Cliente = new Cliente
+            {
+                IdCliente = idCliente,
+                Nome = nome,
+                Email = email,
+                Cpf = cpf
+            };
+
+            var domainService = new ClienteService(_gatewayClienteMock, _validator);
+
+            //Mockando retorno do metodo interno do FindByIdAsync
+            _gatewayClienteMock.FindByIdAsync(idCliente)
+                .Returns(new ValueTask<Cliente>(Cliente));
+
+            _gatewayClienteMock.DeleteAsync(idCliente)
+                .Returns(Task.FromResult(ModelResultFactory.SucessResult()));
+
+            //Act
+            var result = await domainService.DeleteAsync(idCliente);
+
+            //Assert
+            Assert.True(result.IsValid);
+        }
+
+        /// <summary>
+        /// Testa a consulta por id
+        /// </summary>
+        [Theory]
+        [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
         public async Task ConsultarClientePorIdComDadosValidos(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
@@ -204,6 +239,51 @@ namespace TestProject.UnitTest.Domain
 
             //Act
             var result = await domainService.GetItemsAsync(filter, sortProp);
+
+            //Assert
+            Assert.True(result.Content.Any());
+        }
+
+        /// <summary>
+        /// Testa a consulta com condição de pesquisa
+        /// </summary>
+        [Theory]
+        [MemberData(nameof(ObterDados), enmTipo.Consulta, true, 3)]
+        public async Task ConsultarClienteComCondicao(IPagingQueryParam filter, Expression<Func<Cliente, object>> sortProp, IEnumerable<Cliente> clientes)
+        {
+            ///Arrange
+            var param = new PagingQueryParam<Cliente>() { CurrentPage = 1, Take = 10 };
+            var command = new ClienteGetItemsCommand(filter, param.ConsultRule(), sortProp);
+
+            //Mockando retorno do metodo interno do GetItemsAsync
+            _gatewayClienteMock.GetItemsAsync(Arg.Any<PagingQueryParam<Cliente>>(),
+                Arg.Any<Expression<Func<Cliente, bool>>>(),
+                Arg.Any<Expression<Func<Cliente, object>>>())
+                .Returns(new ValueTask<PagingQueryResult<Cliente>>(new PagingQueryResult<Cliente>(new List<Cliente>(clientes))));
+
+            //Act
+            var result = await _gatewayClienteMock.GetItemsAsync(filter, param.ConsultRule(), sortProp);
+
+            //Assert
+            Assert.True(result.Content.Any());
+        }
+
+        /// <summary>
+        /// Testa a consulta sem condição de pesquisa
+        /// </summary>
+        [Theory]
+        [MemberData(nameof(ObterDados), enmTipo.Consulta, true, 3)]
+        public async Task ConsultarClienteSemCondicao(IPagingQueryParam filter, Expression<Func<Cliente, object>> sortProp, IEnumerable<Cliente> clientes)
+        {
+            ///Arrange
+            var command = new ClienteGetItemsCommand(filter, sortProp);
+
+            //Mockando retorno do metodo interno do GetItemsAsync
+            _gatewayClienteMock.GetItemsAsync(filter, sortProp)
+                .Returns(new ValueTask<PagingQueryResult<Cliente>>(new PagingQueryResult<Cliente>(new List<Cliente>(clientes))));
+
+            //Act
+            var result = await _gatewayClienteMock.GetItemsAsync(filter, sortProp);
 
             //Assert
             Assert.True(result.Content.Any());
