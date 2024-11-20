@@ -1,5 +1,4 @@
-﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Commands;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Commands;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Dispositivo.Handlers;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
@@ -238,11 +237,38 @@ namespace TestProject.UnitTest.Aplication
 
         #region [ Xunit MemberData ]
 
-namespace TestProject.UnitTest.Domain
-{
-    //TODO: Há Implemetar :: Copiar cliente use case test como modelo,
-    //trocar entidade e ajustar consulta e medotodos especificos da entidade
-    internal class DispositivoUseCasesTest
-    {
+        /// <summary>
+        /// Mock de dados
+        /// </summary>
+        public static IEnumerable<object[]> ObterDados(enmTipo tipo, bool dadosValidos, int quantidade)
+        {
+            switch (tipo)
+            {
+                case enmTipo.Inclusao:
+                    if (dadosValidos)
+                        return DispositivoMock.ObterDadosValidos(quantidade);
+                    else
+                        return DispositivoMock.ObterDadosInvalidos(quantidade);
+                case enmTipo.Alteracao:
+                    if (dadosValidos)
+                        return DispositivoMock.ObterDadosValidos(quantidade)
+                            .Select(i => new object[] { Guid.NewGuid() }.Concat(i).ToArray());
+                    else
+                        return DispositivoMock.ObterDadosInvalidos(quantidade)
+                            .Select(i => new object[] { Guid.NewGuid() }.Concat(i).ToArray());
+                case enmTipo.Consulta:
+                    return DispositivoMock.ObterDadosConsulta(quantidade);
+                case enmTipo.ConsultaPorId:
+                    if (dadosValidos)
+                        return DispositivoMock.ObterDadosConsultaPorIdValidos(quantidade);
+                    else
+                        return DispositivoMock.ObterDadosConsultaPorIdInvalidos(quantidade);
+                default:
+                    return null;
+            }
+        }
+
+        #endregion
+
     }
 }

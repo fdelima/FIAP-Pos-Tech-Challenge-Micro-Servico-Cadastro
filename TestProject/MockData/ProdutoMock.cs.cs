@@ -7,7 +7,7 @@ namespace TestProject.MockData
     /// <summary>
     /// Mock de dados das ações
     /// </summary>
-    public class ClienteMock
+    public class ProdutoMock
     {
 
         /// <summary>
@@ -18,9 +18,10 @@ namespace TestProject.MockData
             for (var index = 1; index <= quantidade; index++)
                 yield return new object[]
                 {
-                    $"Nome do cliente {index}",
-                    $"cliente{index}@fiap.com.br",
-                    1234567890 + index
+                    $"Nome do Produto {index}",
+                    10 + index,
+                    $"Descricao do Produto {index}",
+                    "LANCHE"
                 };
         }
 
@@ -33,8 +34,9 @@ namespace TestProject.MockData
                 yield return new object[]
                 {
                     string.Empty,
+                    0,
                     string.Empty,
-                    0
+                    string.Empty
                 };
         }
 
@@ -46,16 +48,17 @@ namespace TestProject.MockData
 
             for (var index = 1; index <= quantidade; index++)
             {
-                var param = new PagingQueryParam<Cliente>() { CurrentPage = index, Take = 10 };
+                var param = new PagingQueryParam<Produto>() { CurrentPage = index, Take = 10 };
                 yield return new object[]
                 {
                     param,
                     param.SortProp(),
-                    new List<Cliente>{
-                        new Cliente {
-                            Nome = $"Nome do cliente {index}",
-                            Email = $"cliente{index}@fiap.com.br",
-                            Cpf = 1234567890 + index
+                    new List<Produto>{
+                        new Produto {
+                            Nome = $"Nome do Produto {index}",
+                            Preco = 10 + index,
+                            Descricao = $"Descricao do Produto {index}",
+                            Categoria = "LANCHE"
                         }
                     }
                 };
