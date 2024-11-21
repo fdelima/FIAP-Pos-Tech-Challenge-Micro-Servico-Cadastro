@@ -40,7 +40,6 @@
 
 	<ItemGroup>
 	  <Folder Include="ComponenteTest\" />
-	  <Folder Include="IntegrationTest\External\" />
 	</ItemGroup>
 
 </Project>

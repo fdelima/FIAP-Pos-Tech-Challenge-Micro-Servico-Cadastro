@@ -12,7 +12,7 @@ namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways
     /// Implementação dos Gateways, classe reponsavel efetivamente pela realização da ação no banco de dados.
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    internal class BaseGateway<TEntity> : IGateways<TEntity> where TEntity : class, IDomainEntity
+    public class BaseGateway<TEntity> : IGateways<TEntity> where TEntity : class, IDomainEntity
     {
         /// <summary>
         /// contexto

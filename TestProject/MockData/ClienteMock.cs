@@ -32,8 +32,8 @@ namespace TestProject.MockData
             for (var index = 1; index <= quantidade; index++)
                 yield return new object[]
                 {
-                    string.Empty,
-                    string.Empty,
+                    null,
+                    null,
                     0
                 };
         }
@@ -43,16 +43,16 @@ namespace TestProject.MockData
         /// </summary>
         public static IEnumerable<object[]> ObterDadosConsulta(int quantidade)
         {
-
             for (var index = 1; index <= quantidade; index++)
             {
-                var param = new PagingQueryParam<Cliente>() { CurrentPage = index, Take = 10 };
+                var param = new PagingQueryParam<Cliente>() { CurrentPage = 1, Take = 10 };
                 yield return new object[]
                 {
                     param,
                     param.SortProp(),
                     new List<Cliente>{
                         new Cliente {
+                            IdCliente = Guid.NewGuid(),
                             Nome = $"Nome do cliente {index}",
                             Email = $"cliente{index}@fiap.com.br",
                             Cpf = 1234567890 + index
