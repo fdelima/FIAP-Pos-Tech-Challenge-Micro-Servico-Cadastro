@@ -8,8 +8,8 @@
       "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/api-docs",
       "serviceActions": {
         "fiap.pos.tech.challenge.micro.servico.cadastro.api": "StartDebugging",
-        "mssqltools": "StartWithoutDebugging",
-        "sqlserver": "StartWithoutDebugging"
+        "mssqltools-cadastro": "StartWithoutDebugging",
+        "sqlserver-cadastro": "StartWithoutDebugging"
       }
     }
   }

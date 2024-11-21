@@ -6,11 +6,11 @@ services:
   fiap.pos.tech.challenge.micro.servico.cadastro.api:
     image: ${DOCKER_REGISTRY-}fiappostechchallengemicroservicocadastroapi
     depends_on:
-      - mssqltools
+      - mssqltools-cadastro
     build:
       context: ../
       dockerfile: Src/Api/Dockerfile
-  sqlserver:
+  sqlserver-cadastro:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
       SA_PASSWORD: "SqlServer2019!"
@@ -24,10 +24,10 @@ services:
       retries: 20
     volumes:
       - sql_data:/var/opt/mssql
-  mssqltools:
+  mssqltools-cadastro:
     image: mcr.microsoft.com/mssql-tools
     depends_on:
-      - sqlserver
+      - sqlserver-cadastro
     volumes:
       - ./DataBase/init-database.sh:/tmp/init-database.sh
       - ../../FIAP-Pos-Tech-Challenge-Infra-Bd/Src/Modelagem-banco-de-dados/micro-servico-cadastro/tech-challenge-mer-1.sql:/tmp/tech-challenge-mer-1.sql
