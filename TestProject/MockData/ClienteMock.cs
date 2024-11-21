@@ -1,7 +1,6 @@
 ﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.ValuesObject;
 
 namespace TestProject.MockData
 {

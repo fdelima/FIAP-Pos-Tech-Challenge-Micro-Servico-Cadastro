@@ -1,5 +1,4 @@
 ﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
@@ -7,7 +6,6 @@ using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Services;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Validator;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.ValuesObject;
 using FluentValidation;
 using NSubstitute;
 using System.Linq.Expressions;

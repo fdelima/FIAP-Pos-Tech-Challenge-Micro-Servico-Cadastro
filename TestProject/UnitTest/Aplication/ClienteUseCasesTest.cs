@@ -1,19 +1,11 @@
-﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Handlers;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Validator;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.ValuesObject;
-using FluentValidation;
-using MediatR;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
-using Microsoft.Extensions.Configuration;
 using NSubstitute;
-using NSubstitute.Extensions;
 using System.Linq.Expressions;
 using TestProject.MockData;
 
