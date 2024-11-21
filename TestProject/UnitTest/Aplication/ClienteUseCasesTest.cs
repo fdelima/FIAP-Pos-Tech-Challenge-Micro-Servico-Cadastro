@@ -34,18 +34,18 @@ namespace TestProject.UnitTest.Aplication
         public async Task InserirComDadosValidos(string nome, string email, long cpf)
         {
             ///Arrange
-            var Cliente = new Cliente
+            var cliente = new Cliente
             {
                 Nome = nome,
                 Email = email,
                 Cpf = cpf
             };
 
-            var command = new ClientePostCommand(Cliente);
+            var command = new ClientePostCommand(cliente);
 
             //Mockando retorno do serviço de domínio.
-            _service.InsertAsync(Cliente)
-                .Returns(Task.FromResult(ModelResultFactory.SucessResult(Cliente)));
+            _service.InsertAsync(cliente)
+                .Returns(Task.FromResult(ModelResultFactory.SucessResult(cliente)));
 
             //Act
             var handler = new ClientePostHandler(_service);
@@ -63,17 +63,17 @@ namespace TestProject.UnitTest.Aplication
         public async Task InserirComDadosInvalidos(string nome, string email, long cpf)
         {
             ///Arrange
-            var Cliente = new Cliente
+            var cliente = new Cliente
             {
                 Nome = nome,
                 Email = email,
                 Cpf = cpf
             };
 
-            var command = new ClientePostCommand(Cliente);
+            var command = new ClientePostCommand(cliente);
 
             //Mockando retorno do serviço de domínio.
-            _service.InsertAsync(Cliente)
+            _service.InsertAsync(cliente)
                 .Returns(Task.FromResult(ModelResultFactory.NotFoundResult<Cliente>()));
 
             //Act
@@ -93,7 +93,7 @@ namespace TestProject.UnitTest.Aplication
         public async Task AlterarComDadosValidos(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
-            var Cliente = new Cliente
+            var cliente = new Cliente
             {
                 IdCliente = idCliente,
                 Nome = nome,
@@ -101,10 +101,10 @@ namespace TestProject.UnitTest.Aplication
                 Cpf = cpf
             };
 
-            var command = new ClientePutCommand(idCliente, Cliente);
+            var command = new ClientePutCommand(idCliente, cliente);
 
             //Mockando retorno do serviço de domínio.
-            _service.UpdateAsync(Cliente)
+            _service.UpdateAsync(cliente)
                 .Returns(Task.FromResult(ModelResultFactory.SucessResult()));
 
             //Act
@@ -123,7 +123,7 @@ namespace TestProject.UnitTest.Aplication
         public async Task AlterarComDadosInvalidos(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
-            var Cliente = new Cliente
+            var cliente = new Cliente
             {
                 IdCliente = idCliente,
                 Nome = nome,
@@ -131,10 +131,10 @@ namespace TestProject.UnitTest.Aplication
                 Cpf = cpf
             };
 
-            var command = new ClientePutCommand(idCliente, Cliente);
+            var command = new ClientePutCommand(idCliente, cliente);
 
             //Mockando retorno do serviço de domínio.
-            _service.UpdateAsync(Cliente)
+            _service.UpdateAsync(cliente)
                 .Returns(Task.FromResult(ModelResultFactory.NotFoundResult<Cliente>()));
 
             //Act
@@ -175,7 +175,7 @@ namespace TestProject.UnitTest.Aplication
         public async Task ConsultarClientePorId(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
-            var Cliente = new Cliente
+            var cliente = new Cliente
             {
                 IdCliente = idCliente,
                 Nome = nome,
@@ -187,7 +187,7 @@ namespace TestProject.UnitTest.Aplication
 
             //Mockando retorno do serviço de domínio.
             _service.FindByIdAsync(idCliente)
-                .Returns(Task.FromResult(ModelResultFactory.SucessResult(Cliente)));
+                .Returns(Task.FromResult(ModelResultFactory.SucessResult(cliente)));
 
             //Act
             var handler = new ClienteFindByIdHandler(_service);
