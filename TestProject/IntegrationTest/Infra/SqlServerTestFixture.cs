@@ -4,19 +4,20 @@ namespace TestProject.IntegrationTest.Infra
 {
     public class SqlServerTestFixture : IDisposable
     {
-        const string port = "1434";
+        const string port = "1432";
         const string pwd = "SqlServer2019!";
-        const string network = "test-network-micro-servico-cadastro";
-        internal const string ConnectionString = $"Server=localhost,{port}; Database=tech-challenge-micro-servico-cadastro-grupo-71; User ID=sa; Password={pwd}; MultipleActiveResultSets=true; TrustServerCertificate=True";
+        const string network = "network-cadastro-test";
 
         //sqlserver
         private const string ImageName = "mcr.microsoft.com/mssql/server:2019-latest";
-        private const string DatabaseContainerName = "sqlserver-db-tests";
+        private const string DatabaseContainerName = "sqlserver-db-cadastro-test";
         private const string DataBaseName = "tech-challenge-micro-servico-cadastro-grupo-71";
+        
+        private string ConnectionString = $"Server=localhost,{port}; Database={DataBaseName}; User ID=sa; Password={pwd}; MultipleActiveResultSets=true; TrustServerCertificate=True";
 
         //mssql-tools
         private const string ImageNameMssqlTools = "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test";
-        private const string DatabaseContainerNameMssqlTools = "mssql-tools-micro-servico-cadastro";
+        private const string DatabaseContainerNameMssqlTools = "mssql-tools-cadastro";
 
         public SqlServerTestFixture()
         {
