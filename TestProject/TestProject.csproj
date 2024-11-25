@@ -39,4 +39,10 @@
 		<Using Include="Xunit" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="BDD\Features\ControlarClientes.feature">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

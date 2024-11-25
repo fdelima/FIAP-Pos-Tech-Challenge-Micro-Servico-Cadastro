@@ -4,7 +4,6 @@ Feature: ControlarClientes
 	Adicionar um Cliente
 	Alterar um Cliente
 	Consultar um Cliente
-	Listar os Clientes
 	Deletar um Cliente
 
 Scenario: Controlar Clientes
