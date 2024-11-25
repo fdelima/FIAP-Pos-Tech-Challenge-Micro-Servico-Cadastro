@@ -1,26 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TestProject.IntegrationTest.Infra;
 
-namespace TestProject.IntegrationTest.External
+namespace TestProject.Infra
 {
-    public class TestsBase : IDisposable
+    public class IntegrationTestsBase : IDisposable
     {
-
-        //internal readonly FIAP.Pos.Tech.Challenge.Micro.Servico.Pedido.Infra.Context _context;
         protected readonly DbContextOptions<FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Context> _options;
         internal readonly SqlServerTestFixture _sqlserverTest;
 
-        public TestsBase()
+        public IntegrationTestsBase()
         {
             // Do "global" initialization here; Called before every test method.
-            _sqlserverTest = new SqlServerTestFixture();
-            //_context = sqlserverTest.GetDbContext();
+            _sqlserverTest = new SqlServerTestFixture(
+                imageNameMssqlTools: "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test",
+                containerNameMssqlTools: "mssql-tools-cadastro-test",
+                databaseContainerName: "sqlserver-db-cadastro-test", port: "1432");
         }
 
         public void Dispose()
         {
             // Do "global" teardown here; Called after every test method.
-            //_context.Dispose();
             _sqlserverTest.Dispose();
         }
     }

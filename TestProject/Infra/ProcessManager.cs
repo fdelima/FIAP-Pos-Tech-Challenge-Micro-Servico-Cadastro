@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace TestProject.IntegrationTest.Infra;
+namespace TestProject.Infra;
 public class ProcessManager
 {
     public static string ExecuteCommand(string file, string arguments)

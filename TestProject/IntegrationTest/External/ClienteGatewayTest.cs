@@ -1,25 +1,25 @@
 ﻿using System.Linq.Expressions;
-using TestProject.IntegrationTest.Infra;
 using TestProject.MockData;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
+using TestProject.Infra;
 
 namespace TestProject.IntegrationTest.External
 {
     /// <summary>
     /// Classe de teste.
     /// </summary>
-    public partial class ClienteGatewayTest : IClassFixture<TestsBase>
+    public partial class ClienteGatewayTest : IClassFixture<IntegrationTestsBase>
     {
         internal readonly SqlServerTestFixture _sqlserverTest;
 
         /// <summary>
         /// Construtor da classe de teste.
         /// </summary>
-        public ClienteGatewayTest(TestsBase data)
+        public ClienteGatewayTest(IntegrationTestsBase data)
         {
             _sqlserverTest = data._sqlserverTest;
         }

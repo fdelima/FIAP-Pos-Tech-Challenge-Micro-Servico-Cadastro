@@ -1,4 +1,4 @@
-namespace TestProject.IntegrationTest.Infra
+namespace TestProject.Infra
 {
     internal class DockerManager
     {
