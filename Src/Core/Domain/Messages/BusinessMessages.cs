@@ -1,5 +1,8 @@
-﻿namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages
 {
+    [ExcludeFromCodeCoverage(Justification = "Arquivo de configuração")]
     /// <summary>
     /// Mensagens padrões de negócio
     /// </summary>

@@ -1,31 +1,40 @@
 using FIAP.Pos.Tech.Challenge.Api;
 using FIAP.Pos.Tech.Challenge.IoC;
+using System.Diagnostics.CodeAnalysis;
 
-WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+[ExcludeFromCodeCoverage(Justification = "Arquivo de configuração")]
+public class Program
+{
+    public static void Main(string[] args)
+    {
 
-App.SetAtributesAppFromDll();
+        WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+        App.SetAtributesAppFromDll();
 
-builder.Services.ConfigureModelValidations();
+        // Add services to the container.
+        builder.Services.AddControllers();
 
-builder.Services.AddSwagger("Web Api C# Sample");
+        builder.Services.ConfigureModelValidations();
 
-builder.Services.RegisterDependencies(builder.Configuration);
+        builder.Services.AddSwagger("Web Api C# Sample");
 
-WebApplication app = builder.Build();
+        builder.Services.RegisterDependencies(builder.Configuration);
 
-app.ConfigureSwagger();
+        WebApplication app = builder.Build();
 
-app.ConfigureReDoc();
+        app.ConfigureSwagger();
 
-app.UseHttpsRedirection();
+        app.ConfigureReDoc();
 
-app.UseAuthorization();
+        app.UseHttpsRedirection();
 
-app.MapControllers();
+        app.UseAuthorization();
 
-app.AddGlobalErrorHandler();
+        app.MapControllers();
 
-app.Run();
+        app.AddGlobalErrorHandler();
+
+        app.Run();
+    }
+}

@@ -2,9 +2,11 @@
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Validator;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC
 {
+    [ExcludeFromCodeCoverage(Justification = "Arquivo de configuração")]
     public static class ValidatorsRegistry
     {
         public static void RegisterValidators(this IServiceCollection services)
