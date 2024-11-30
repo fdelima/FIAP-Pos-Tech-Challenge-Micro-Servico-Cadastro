@@ -33,10 +33,10 @@ namespace TestProject.MockData
             for (var index = 1; index <= quantidade; index++)
                 yield return new object[]
                 {
-                    string.Empty,
+                    null,
                     0,
-                    string.Empty,
-                    string.Empty
+                    null,
+                    null
                 };
         }
 
@@ -48,13 +48,14 @@ namespace TestProject.MockData
 
             for (var index = 1; index <= quantidade; index++)
             {
-                var param = new PagingQueryParam<Produto>() { CurrentPage = index, Take = 10 };
+                var param = new PagingQueryParam<Produto>() { CurrentPage = 1, Take = 10 };
                 yield return new object[]
                 {
                     param,
                     param.SortProp(),
                     new List<Produto>{
                         new Produto {
+                            IdProduto = Guid.NewGuid(),
                             Nome = $"Nome do Produto {index}",
                             Preco = 10 + index,
                             Descricao = $"Descricao do Produto {index}",

@@ -30,7 +30,7 @@ namespace TestProject.MockData
 			for (var index = 1; index <= quantidade; index++)
 				yield return new object[]
 				{
-					string.Empty
+					null
 				};
 		}
 
@@ -42,13 +42,14 @@ namespace TestProject.MockData
 
 			for (var index = 1; index <= quantidade; index++)
 			{
-				var param = new PagingQueryParam<Dispositivo>() { CurrentPage = index, Take = 10 };
+				var param = new PagingQueryParam<Dispositivo>() { CurrentPage = 1, Take = 10 };
 				yield return new object[]
 				{
 					param,
 					param.SortProp(),
 					new List<Dispositivo>{
 						new Dispositivo {
+							IdDispositivo = Guid.NewGuid(),
 							Identificador = $"Identificador {index}"
 						}
 					}

@@ -4,22 +4,27 @@ namespace TestProject.Infra
 {
     public class IntegrationTestsBase : IDisposable
     {
-        protected readonly DbContextOptions<FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Context> _options;
+        const string containerNameMssqlTools = "mssql-tools-cadastro-test";
         internal readonly SqlServerTestFixture _sqlserverTest;
+        private static int _tests = 0;
 
         public IntegrationTestsBase()
         {
-            // Do "global" initialization here; Called before every test method.
+            _tests += 1;
             _sqlserverTest = new SqlServerTestFixture(
-                imageNameMssqlTools: "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test",
-                containerNameMssqlTools: "mssql-tools-cadastro-test",
-                databaseContainerName: "sqlserver-db-cadastro-test", port: "1432");
+            imageNameMssqlTools: "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test",
+            containerNameMssqlTools: containerNameMssqlTools,
+            databaseContainerName: "sqlserver-db-cadastro-test", port: "1432");
+            Thread.Sleep(10000);
         }
 
         public void Dispose()
         {
-            // Do "global" teardown here; Called after every test method.
-            _sqlserverTest.Dispose();
+            _tests -= 1;
+            if (_tests == 0)
+            {
+                _sqlserverTest.Dispose();
+            }
         }
     }
 }

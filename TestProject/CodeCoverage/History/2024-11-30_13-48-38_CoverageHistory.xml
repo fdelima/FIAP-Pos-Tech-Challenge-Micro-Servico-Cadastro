@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<coverage version="1.0" date="2024-11-26_19-33-52" tag="">
+<coverage version="1.0" date="2024-11-30_13-48-38" tag="">
   <assembly name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application">
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers.ClienteController" coveredlines="50" coverablelines="50" totallines="130" coveredbranches="12" totalbranches="14" coveredcodeelements="8" totalcodeelements="8" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers.DispositivoController" coveredlines="50" coverablelines="50" totallines="130" coveredbranches="12" totalbranches="14" coveredcodeelements="8" totalcodeelements="8" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.Controllers.ProdutoController" coveredlines="50" coverablelines="54" totallines="139" coveredbranches="12" totalbranches="14" coveredcodeelements="8" totalcodeelements="9" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC.CommandsRegistry" coveredlines="0" coverablelines="19" totallines="45" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC.ControllersRegistry" coveredlines="0" coverablelines="5" totallines="17" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC.DomainServicesRegistry" coveredlines="0" coverablelines="6" totallines="18" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC.NativeInjectorSetup" coveredlines="0" coverablelines="6" totallines="21" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.IoC.ValidatorsRegistry" coveredlines="0" coverablelines="5" totallines="20" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands.ClienteDeleteCommand" coveredlines="7" coverablelines="7" totallines="17" coveredbranches="0" totalbranches="0" coveredcodeelements="3" totalcodeelements="3" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands.ClienteFindByIdCommand" coveredlines="5" coverablelines="5" totallines="15" coveredbranches="0" totalbranches="0" coveredcodeelements="2" totalcodeelements="2" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Application.UseCases.Cliente.Commands.ClienteGetItemsCommand" coveredlines="12" coverablelines="12" totallines="28" coveredbranches="0" totalbranches="0" coveredcodeelements="5" totalcodeelements="5" />
@@ -51,9 +46,6 @@
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions.IntExtension" coveredlines="0" coverablelines="3" totallines="10" coveredbranches="0" totalbranches="2" coveredcodeelements="0" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions.ProdutoExtension" coveredlines="11" coverablelines="15" totallines="42" coveredbranches="6" totalbranches="12" coveredcodeelements="2" totalcodeelements="2" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions.StringExtension" coveredlines="0" coverablelines="12" totallines="24" coveredbranches="0" totalbranches="6" coveredcodeelements="0" totalcodeelements="2" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages.BusinessMessages" coveredlines="5" coverablelines="7" totallines="44" coveredbranches="0" totalbranches="0" coveredcodeelements="5" totalcodeelements="7" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages.ErrorMessages" coveredlines="0" coverablelines="1" totallines="28" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Messages.ValidationMessages" coveredlines="0" coverablelines="2" totallines="81" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="2" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models.ModelResult" coveredlines="14" coverablelines="31" totallines="109" coveredbranches="1" totalbranches="2" coveredcodeelements="8" totalcodeelements="14" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Models.ModelResultFactory" coveredlines="30" coverablelines="54" totallines="118" coveredbranches="0" totalbranches="4" coveredcodeelements="6" totalcodeelements="11" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.PagingQueryParam`1" coveredlines="5" coverablelines="5" totallines="37" coveredbranches="0" totalbranches="0" coveredcodeelements="5" totalcodeelements="5" />
@@ -70,15 +62,10 @@
   <assembly name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra">
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Context" coveredlines="15" coverablelines="15" totallines="41" coveredbranches="0" totalbranches="0" coveredcodeelements="7" totalcodeelements="7" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways.BaseGateway`1" coveredlines="71" coverablelines="135" totallines="343" coveredbranches="11" totalbranches="34" coveredcodeelements="12" totalcodeelements="24" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.IoC.DatabaseRegistry" coveredlines="0" coverablelines="7" totallines="20" coveredbranches="0" totalbranches="4" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.IoC.GatewaysRegistry" coveredlines="0" coverablelines="3" totallines="15" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-    <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.IoC.NativeInjectorSetup" coveredlines="0" coverablelines="4" totallines="20" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Mappings.ClienteMap" coveredlines="14" coverablelines="14" totallines="26" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Mappings.DispositivoMap" coveredlines="16" coverablelines="16" totallines="28" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Mappings.ProdutoImagensMap" coveredlines="14" coverablelines="14" totallines="27" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
     <class name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Mappings.ProdutoMap" coveredlines="19" coverablelines="19" totallines="31" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
   </assembly>
-  <assembly name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Ioc">
-    <class name="FIAP.Pos.Tech.Challenge.IoC.NativeInjectorSetup" coveredlines="0" coverablelines="4" totallines="22" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="1" />
-  </assembly>
+  <assembly name="FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Ioc" />
 </coverage>
