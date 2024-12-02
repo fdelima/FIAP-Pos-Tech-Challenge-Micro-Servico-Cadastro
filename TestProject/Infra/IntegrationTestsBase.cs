@@ -15,7 +15,7 @@ namespace TestProject.Infra
             imageNameMssqlTools: "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test",
             containerNameMssqlTools: containerNameMssqlTools,
             databaseContainerName: "sqlserver-db-cadastro-test", port: "1432");
-            Thread.Sleep(10000);
+            Thread.Sleep(15000);
         }
 
         public void Dispose()
