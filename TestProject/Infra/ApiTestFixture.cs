@@ -4,7 +4,7 @@ namespace TestProject.Infra
 {
     public class ApiTestFixture : IDisposable
     {
-        const string port = "5000";
+        const string port = "5002";
         const string network = "network-cadastro-test";
 
         //api
