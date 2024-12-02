@@ -43,6 +43,12 @@
 	  <None Update="BDD\Features\ControlarClientes.feature">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+	  <None Update="BDD\Features\ControlarDispositivos.feature">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="BDD\Features\ControlarProdutos.feature">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 	<ItemGroup>
