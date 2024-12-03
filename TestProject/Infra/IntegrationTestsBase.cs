@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace TestProject.Infra
+﻿namespace TestProject.Infra
 {
     public class IntegrationTestsBase : IDisposable
     {

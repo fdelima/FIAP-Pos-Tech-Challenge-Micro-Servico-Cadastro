@@ -1,11 +1,11 @@
-﻿using System.Linq.Expressions;
-using TestProject.MockData;
+﻿using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Entities;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
-using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain;
 using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Extensions;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Domain.Interfaces;
+using FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Gateways;
+using System.Linq.Expressions;
 using TestProject.Infra;
+using TestProject.MockData;
 
 namespace TestProject.IntegrationTest.External
 {
