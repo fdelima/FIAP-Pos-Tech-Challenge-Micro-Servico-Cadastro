@@ -29,7 +29,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 3)]
-        public async void InserirComDadosValidos(string identificador)
+        public async Task InserirComDadosValidos(string identificador)
         {
             ///Arrange
             var dispositivo = new Dispositivo
@@ -90,7 +90,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosValidos(Guid idDispositivo, string identificador)
+        public async Task AlterarComDadosValidos(Guid idDispositivo, string identificador)
         {
             ///Arrange
             var dispositivo = new Dispositivo
@@ -132,7 +132,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosInvalidos(Guid idDispositivo, string identificador)
+        public async Task AlterarComDadosInvalidos(Guid idDispositivo, string identificador)
         {
             ///Arrange
             var dispositivo = new Dispositivo
@@ -175,7 +175,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void DeletarDispositivo(string identificador)
+        public async Task DeletarDispositivo(string identificador)
         {
             ///Arrange
             var dispositivo = new Dispositivo
@@ -212,7 +212,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void ConsultarDispositivoPorId(string identificador)
+        public async Task ConsultarDispositivoPorId(string identificador)
         {
             ///Arrange
             var dispositivo = new Dispositivo

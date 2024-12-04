@@ -9,11 +9,14 @@
         public IntegrationTestsBase()
         {
             _tests += 1;
+
             _sqlserverTest = new SqlServerTestFixture(
             imageNameMssqlTools: "fdelima/fiap-pos-techchallenge-micro-servico-cadastro-gurpo-71-scripts-database:fase4-test",
             containerNameMssqlTools: containerNameMssqlTools,
             databaseContainerName: "sqlserver-db-cadastro-test", port: "1432");
-            Thread.Sleep(40000);
+            
+            //Aguardar download da image
+            Thread.Sleep(15000);
         }
 
         public void Dispose()

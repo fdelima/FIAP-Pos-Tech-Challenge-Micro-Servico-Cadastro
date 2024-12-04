@@ -11,18 +11,20 @@ namespace TestProject.Infra
         private const string ImageName = "mcr.microsoft.com/mssql/server:2019-latest";
         private const string DataBaseName = "tech-challenge-micro-servico-cadastro-grupo-71";
 
-        string _port; string _databaseContainerName;
+        string _port; string _databaseContainerName; string _containerNameMssqlTools;
 
         public SqlServerTestFixture(string imageNameMssqlTools,
                                     string containerNameMssqlTools,
                                     string databaseContainerName, string port)
         {
+            _port = port;
+            _databaseContainerName = databaseContainerName;
+            _containerNameMssqlTools = containerNameMssqlTools;
+
             if (DockerManager.UseDocker())
             {
                 if (!DockerManager.ContainerIsRunning(databaseContainerName))
                 {
-                    _port = port;
-                    _databaseContainerName = databaseContainerName;
                     DockerManager.PullImageIfDoesNotExists(ImageName);
                     DockerManager.KillContainer(databaseContainerName);
                     DockerManager.KillVolume(databaseContainerName);
@@ -38,8 +40,6 @@ namespace TestProject.Infra
                         $"--network {network} " +
                         $"-d {ImageName}");
 
-                    Thread.Sleep(1000);
-
                     DockerManager.PullImageIfDoesNotExists(imageNameMssqlTools);
                     DockerManager.KillContainer(containerNameMssqlTools);
                     DockerManager.KillVolume(containerNameMssqlTools);
@@ -47,17 +47,17 @@ namespace TestProject.Infra
                         $"run --name {containerNameMssqlTools} " +
                         $"--network {network} " +
                         $"-d {imageNameMssqlTools}");
-
-                    while (DockerManager.ContainerIsRunning(containerNameMssqlTools))
-                    {
-                        Thread.Sleep(1000);
-                    }
                 }
             }
         }
 
         public FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Context GetDbContext()
         {
+            while (DockerManager.ContainerIsRunning(_containerNameMssqlTools))
+            {
+                Thread.Sleep(1000);
+            }
+
             string ConnectionString = $"Server=localhost,{_port}; Database={DataBaseName}; User ID=sa; Password={pwd}; MultipleActiveResultSets=true; TrustServerCertificate=True";
 
             var options = new DbContextOptionsBuilder<FIAP.Pos.Tech.Challenge.Micro.Servico.Cadastro.Infra.Context>()

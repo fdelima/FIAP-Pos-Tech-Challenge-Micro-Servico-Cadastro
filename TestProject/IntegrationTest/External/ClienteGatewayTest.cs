@@ -29,7 +29,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 3)]
-        public async void InserirComDadosValidos(string nome, string email, long cpf)
+        public async Task InserirComDadosValidos(string nome, string email, long cpf)
         {
             ///Arrange
             var cliente = new Cliente
@@ -94,7 +94,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosValidos(Guid idCliente, string nome, string email, long cpf)
+        public async Task AlterarComDadosValidos(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
             var cliente = new Cliente
@@ -138,7 +138,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosInvalidos(Guid idCliente, string nome, string email, long cpf)
+        public async Task AlterarComDadosInvalidos(Guid idCliente, string nome, string email, long cpf)
         {
             ///Arrange
             var cliente = new Cliente
@@ -183,7 +183,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void DeletarCliente(string nome, string email, long cpf)
+        public async Task DeletarCliente(string nome, string email, long cpf)
         {
             ///Arrange
             var cliente = new Cliente
@@ -222,7 +222,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void ConsultarClientePorId(string nome, string email, long cpf)
+        public async Task ConsultarClientePorId(string nome, string email, long cpf)
         {
             ///Arrange
             var cliente = new Cliente
