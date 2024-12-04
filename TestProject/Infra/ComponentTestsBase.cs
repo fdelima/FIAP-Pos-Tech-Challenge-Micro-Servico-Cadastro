@@ -14,7 +14,7 @@
                 containerNameMssqlTools: "mssql-tools-cadastro-component-test",
                 databaseContainerName: "sqlserver-db-cadastro-component-test", port: "1428");
             _apiTest = new ApiTestFixture();
-            Thread.Sleep(10000);
+            Thread.Sleep(20000);
         }
 
         public void Dispose()
