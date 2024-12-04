@@ -29,7 +29,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 3)]
-        public async void InserirComDadosValidos(string nome, decimal preco, string descricao, string categoria)
+        public async Task InserirComDadosValidos(string nome, decimal preco, string descricao, string categoria)
         {
             ///Arrange
             var produto = new Produto
@@ -96,7 +96,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosValidos(Guid idProduto, string nome, decimal preco, string descricao, string categoria)
+        public async Task AlterarComDadosValidos(Guid idProduto, string nome, decimal preco, string descricao, string categoria)
         {
             ///Arrange
             var produto = new Produto
@@ -141,7 +141,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Alteracao, true, 3)]
-        public async void AlterarComDadosInvalidos(Guid idProduto, string nome, decimal preco, string descricao, string categoria)
+        public async Task AlterarComDadosInvalidos(Guid idProduto, string nome, decimal preco, string descricao, string categoria)
         {
             ///Arrange
             var produto = new Produto
@@ -187,7 +187,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void DeletarProduto(string nome, decimal preco, string descricao, string categoria)
+        public async Task DeletarProduto(string nome, decimal preco, string descricao, string categoria)
         {
             ///Arrange
             var produto = new Produto
@@ -227,7 +227,7 @@ namespace TestProject.IntegrationTest.External
         /// </summary>
         [Theory]
         [MemberData(nameof(ObterDados), enmTipo.Inclusao, true, 1)]
-        public async void ConsultarProdutoPorId(string nome, decimal preco, string descricao, string categoria)
+        public async Task ConsultarProdutoPorId(string nome, decimal preco, string descricao, string categoria)
         {
             ///Arrange
             var produto = new Produto
